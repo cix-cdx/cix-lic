@@ -1,0 +1,39 @@
+{
+  "name": "cix-lic",
+  "version": "0.0.25",
+  "description": "Licensing via CLI (Command-Line), CI (Continuous Integration), and API",
+  "main": "./lib/index.js",
+  "bin": {
+    "cix-lic": "./lib/cli.js"
+  },
+  "scripts": {
+    "test": "npm run cleanup && npm run test-all",
+    "test-cvr": "npm run cleanup && npm run test-all-cvr",
+    "cleanup": "node cleanup",
+    "aftertests": "node aftertests",
+    "test-all": "npm run test-mocha",
+    "test-all-cvr": "npm run test-mocha-cvr",
+    "test-mocha": "mocha test --recursive",
+    "test-mocha-cvr": "nyc mocha test --recursive",
+    "coverage": "npm run coveralls",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "author": "Architecode Corporation",
+  "contributors": [
+    "Panit Tuangsuwan <tpanitte@hotmail.com> (https://github.com/tpanitte)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "archappenv": "^2.0.0-alpha.51",
+    "chalk": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.4.1",
+    "shelljs": "^0.7.8",
+    "sinon": "^4.1.3"
+  },
+  "repository": "git+https://github.com/cix-cdx/cix-lic"
+}

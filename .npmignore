@@ -1,0 +1,10 @@
+# Folders 
+.nyc_output/
+test/
+
+# Files
+.gitignore
+*.yml
+aftertests.js
+cleanup.js
+package-lock.json
