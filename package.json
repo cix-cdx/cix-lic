@@ -1,6 +1,6 @@
 {
   "name": "cix-lic",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Licensing via CLI (Command-Line), CI (Continuous Integration), and API",
   "main": "./lib/index.js",
   "bin": {
