@@ -16,10 +16,15 @@ after_success:
 
 deploy:
   skip_cleanup: true
-  provider: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_API_KEY
-  tag: "latest"
-  on:
-    branch: $NPM_ON_BRANCH
-    
+  - provider: npm
+    email: $NPM_EMAIL
+    api_key: $NPM_API_KEY
+    tag: "latest"
+    on:
+      branch: $NPM_ON_LATEST
+  - provider: npm
+    email: $NPM_EMAIL
+    api_key: $NPM_API_KEY
+    tag: "next"
+    on:
+      branch: $NPM_ON_NEXT
