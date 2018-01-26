@@ -7,4 +7,5 @@ test/
 *.yml
 aftertests.js
 cleanup.js
+cix-lic.json
 package-lock.json
