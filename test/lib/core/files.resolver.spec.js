@@ -7,7 +7,7 @@ const FilesResolver = require('../../../lib/core/files.resolver');
 
 describe('files.resolver.js tests', () => {
   describe('#load()', () => {
-    it('expect to ', () => {
+    it('expect to resolve files, #1', () => {
       // arranges
       const baseDir = './test/resources/files';
       const expected = [
@@ -22,7 +22,7 @@ describe('files.resolver.js tests', () => {
       expect(result).to.deep.equal(expected);
     });
 
-    it('expect to ', () => {
+    it('expect to resolve files, #2', () => {
       // arranges
       const baseDir = './test/resources/files';
       const filter = '.ts';
@@ -38,7 +38,7 @@ describe('files.resolver.js tests', () => {
       expect(result).to.deep.equal(expected);
     });
 
-    it('expect to ', () => {
+    it('expect to resolve files, #3', () => {
       // arranges
       const baseDir = './test/resources/files';
       const filter = '*.ts';
@@ -54,7 +54,7 @@ describe('files.resolver.js tests', () => {
       expect(result).to.deep.equal(expected);
     });
 
-    it('expect to ', () => {
+    it('expect to resolve files, #4', () => {
       // arranges
       const baseDir = './test/resources/files';
       const filter = { test: () => true };

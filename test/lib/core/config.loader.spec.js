@@ -6,7 +6,7 @@ const ConfigLoader = require('../../../lib/core/config.loader');
 
 describe('config.loader.js tests', () => {
   describe('#load()', () => {
-    it('expect to ', () => {
+    it('expect to load a default config', () => {
       // arranges
       const expected = {
         baseDir: './lib',
@@ -20,7 +20,7 @@ describe('config.loader.js tests', () => {
       expect(config).to.deep.equal(expected);
     });
 
-    it('expect to ', () => {
+    it('expect to load a specified config', () => {
       // arranges
       const file = './test/resources/configs/test.config.json';
       const expected = {
@@ -36,7 +36,32 @@ describe('config.loader.js tests', () => {
       expect(config).to.deep.equal(expected);
     });
 
-    it('expect to ', () => {
+    it('expect to load a specified config with argv', () => {
+      // arranges
+      const file = './test/resources/configs/test.config.json';
+      const argv = {
+        assert: true,
+        assertAll: true,
+        strict: true
+      };
+      const expected = {
+        a: 0,
+        b: 1,
+        c: 2,
+        assert: true,
+        assertAll: true,
+        strict: true,
+      };
+
+      // acts
+      const config = ConfigLoader.load(file, argv);
+
+      // asserts
+      expect(config).to.deep.equal(expected);
+    });
+
+
+    it('expect to throw an error when config not exists', () => {
       // arranges
       const file = './to/not/exist/config.json';
 
