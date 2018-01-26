@@ -8,6 +8,7 @@ This **cix-lic** modules can license a project via several capabilities.
 
 - **CLI** - Command Line
 - **CI** - Continuous Integration
+- **API** - Application Program Interface
 
 #### LIC Properties
 
@@ -21,13 +22,17 @@ Before we use **cix-lic**, it's important to know what properties are used. It's
 
 - **endYear** | **-e** - the **declarative end year** - _default: "Present"_
 
+- **proc** | **-p** - the **process** - _default: ["lic", "file"]_
+
 - **baseDir** | **-d** - the **directory** where to query files - _default: root source directory_
 
 - **filter** | **-f** - the **file filter** can be **string**, **RegExp**, or **{ test: () => _boolean_ }** - _default: *.js_
 
-- **licFile** | **-i** - the specfied **lic file** (file header) - _default: undefined_
+- **HFLcontent** | **-h** - the **Head File License Content** (file header content) - _default: undefined_
 
-- **licenseFile** | **-c** - the specfied **license file** (package) - _default: undefined_
+- **licenseContent** | **-c** - the **License Content** (license content) - _default: undefined_
+
+- **licenseFile** - the **License File** (license file) - _default: ./LICENSE_
 
 ### CLI - Command Line
 
@@ -69,11 +74,11 @@ Then, we can run **cix-lic** script in **CI Process**.
 
 ### CIX-LIC Command
 
-**Command Tags** are [**LIC Properties**](#lic-properties) and two tags, **conf** and **proc**.
+**Command Tags** are [**LIC Properties**](#lic-properties)
 
 **Examples**
 
-cix-lic -o Jane Smith -l mit >> _owner_: **Jane Smith**, _lic_: **MIT License**
+cix-lic **-o** _Jane Smith_ **-l** _mit_ >> **owner**: _Jane Smith_, **lic**: _MIT License_
 
-cix-lic -l apache-2.0 -d ./lib >> _lic_: **Apache License 2.0**, _baseDir_: **./lib**
+cix-lic **-d** _./lib_ **-l** _apache-2.0_ >> **baseDir**: _./lib_, **lic**: _Apache License 2.0_
 
