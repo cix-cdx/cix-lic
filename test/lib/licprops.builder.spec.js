@@ -153,7 +153,6 @@ describe('licprops.builder.js tests', () => {
 
     it('expect to build data from props, #4', () => {
       // arranges
-      const json = AppEnv.Util.packageJSON();
       const props = {
         owner: 'Panit Tuangsuwan',
         proc: ['lic', 'file']
@@ -164,6 +163,30 @@ describe('licprops.builder.js tests', () => {
         owner: 'Panit Tuangsuwan',
         beginYear: '2018',
         endYear: 'Present',
+        proc: ['lic', 'file']
+      };
+
+      // acts
+      const result = LICPropsBuilder.buildBaseData(props);
+
+      // asserts
+      expect(result).to.deep.equal(expected);
+    });
+
+    it('expect to build data from props, #5', () => {
+      // arranges
+      const props = {
+        owner: 'Panit Tuangsuwan',
+        unlicense: true,
+        proc: ['lic', 'file']
+      };
+      const expected = {
+        lic: 'MIT',
+        license: 'MIT License',
+        owner: 'Panit Tuangsuwan',
+        beginYear: '2018',
+        endYear: 'Present',
+        unlicense: true,
         proc: ['lic', 'file']
       };
 

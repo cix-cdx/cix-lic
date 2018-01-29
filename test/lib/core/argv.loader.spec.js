@@ -131,5 +131,23 @@ describe('argv.loader.js tests', () => {
       // asserts
       expect(result).to.deep.equal(expected);
     });
+
+    it('expect to load argument values from process, #4', () => {
+      // arranges
+      process.argv = [
+        '', '',
+        '--unlicense'
+      ];
+
+      const expected = {
+        unlicense: true,
+      };
+
+      // acts
+      const result = ArgvLoader.load();
+
+      // asserts
+      expect(result).to.deep.equal(expected);
+    });
   });
 });
