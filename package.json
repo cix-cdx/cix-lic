@@ -1,6 +1,6 @@
 {
   "name": "cix-lic",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0",
   "description": "Licensing via CLI (Command-Line), CI (Continuous Integration), and API",
   "main": "./lib/index.js",
   "bin": {
@@ -26,16 +26,16 @@
   "license": "MIT",
   "dependencies": {
     "archappenv": "^2.0.0-alpha.51",
-    "chalk": "^2.3.0",
-    "mock-require": "^3.0.1"
+    "chalk": "^2.3.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
-    "mocha": "^4.0.1",
+    "mocha": "^5.0.0",
+    "mock-require": "^3.0.1",
     "nyc": "^11.4.1",
-    "shelljs": "^0.7.8",
-    "sinon": "^4.1.3"
+    "shelljs": "^0.8.1",
+    "sinon": "^4.2.2"
   },
   "repository": "git+https://github.com/cix-cdx/cix-lic"
 }
