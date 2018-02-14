@@ -1,4 +1,6 @@
 {
   "baseDir": "./lib",
-  "beginYear": "2018"
+  "beginYear": "2018",
+  "assert": true,
+  "assertAll": true
 }
