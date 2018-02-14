@@ -1,10 +1,10 @@
 {
   "name": "cix-lic",
-  "version": "2.0.2",
+  "version": "2.0.5",
   "description": "Licensing via CLI (Command-Line), CI (Continuous Integration), and API",
   "main": "./lib/index.js",
   "bin": {
-    "cix-lic": "./lib/cli.js"
+    "cix-lic": "./cli.js"
   },
   "scripts": {
     "test": "npm run cleanup && npm run test-all",
@@ -17,7 +17,7 @@
     "test-mocha-cvr": "nyc mocha test --recursive",
     "coverage": "npm run coveralls",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "cix-lic": "node ./lib/cli --conf"
+    "cix-lic": "node ./cli --conf"
   },
   "author": "Architecode Corporation",
   "contributors": [

@@ -1,19 +1,11 @@
-/*
- *  Copyright (c) 2018 - present, Architecode Corporation. All Rights Reserved.
- *
- *  This source code is licensed under the MIT License.
- *  The LICENSE file can be found in the root directory.
- *
- *  @cix-lic
-*/
-
+#!/usr/bin/env node
 
 const Chalk = require('chalk');
-const ArgvLoader = require('./core/argv.loader');
-const ConfigLoader = require('./core/config.loader');
-const LICPropsBuilder = require('./licprops.builder');
-const LicenseProcess = require('./license.process');
-const HFLicenseProcess = require('./HFLicense.process');
+const ArgvLoader = require('./lib/core/argv.loader');
+const ConfigLoader = require('./lib/core/config.loader');
+const LICPropsBuilder = require('./lib/licprops.builder');
+const LicenseProcess = require('./lib/license.process');
+const HFLicenseProcess = require('./lib/HFLicense.process');
 
 const argv = ArgvLoader.load();
 const props = argv.hasOwnProperty('conf') ? ConfigLoader.load(argv.conf, argv) : argv;
