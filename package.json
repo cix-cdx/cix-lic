@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "archappenv": "^2.0.0-alpha.51",
+    "archappenv": "^2.0.0-alpha.53",
     "chalk": "^2.3.0"
   },
   "devDependencies": {
@@ -35,7 +35,7 @@
     "mock-require": "^3.0.1",
     "nyc": "^11.4.1",
     "shelljs": "^0.8.1",
-    "sinon": "^4.2.2"
+    "sinon": "^4.3.0"
   },
   "repository": "git+https://github.com/cix-cdx/cix-lic"
 }
