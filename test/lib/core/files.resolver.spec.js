@@ -71,5 +71,23 @@ describe('files.resolver.js tests', () => {
       // asserts
       expect(result).to.deep.equal(expected);
     });
+
+    it('expect to resolve files, #5', () => {
+      // arranges
+      const baseDir = AppEnv.Util.resolveFile('./test/resources/files');
+      const filter = { test: () => true };
+      const expected = [
+        AppEnv.Util.resolveFile('./test/resources/files/a.js'),
+        AppEnv.Util.resolveFile('./test/resources/files/a.ts'),
+        AppEnv.Util.resolveFile('./test/resources/files/b.js'),
+        AppEnv.Util.resolveFile('./test/resources/files/b.ts'),
+      ];
+
+      // acts
+      const result = FilesResolver.resolve(baseDir, filter);
+
+      // asserts
+      expect(result).to.deep.equal(expected);
+    });
   });
 });
