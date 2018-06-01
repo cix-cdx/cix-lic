@@ -11,6 +11,8 @@ describe('config.loader.js tests', () => {
       const expected = {
         baseDir: './lib',
         beginYear: '2018',
+        assert: true,
+        assertAll: true
       };
 
       // acts
