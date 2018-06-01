@@ -81,4 +81,3 @@ Then, we can run **cix-lic** script in **CI Process**.
 cix-lic **-o** _Jane Smith_ **-l** _mit_ >> **owner**: _Jane Smith_, **lic**: _MIT License_
 
 cix-lic **-d** _./lib_ **-l** _apache-2.0_ >> **baseDir**: _./lib_, **lic**: _Apache License 2.0_
-

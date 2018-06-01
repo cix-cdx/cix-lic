@@ -1,6 +1,7 @@
 # Folders 
 .nyc_output/
 test/
+scripts/
 
 # Files
 .gitignore

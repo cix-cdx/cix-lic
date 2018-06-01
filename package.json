@@ -1,6 +1,6 @@
 {
   "name": "cix-lic",
-  "version": "2.0.5",
+  "version": "2.1.0-alpha.1",
   "description": "Licensing via CLI (Command-Line), CI (Continuous Integration), and API",
   "main": "./lib/index.js",
   "bin": {
@@ -9,8 +9,8 @@
   "scripts": {
     "test": "npm run cleanup && npm run test-all",
     "test-cvr": "npm run cleanup && npm run test-all-cvr",
-    "cleanup": "node cleanup",
-    "aftertests": "node aftertests",
+    "cleanup": "node scripts/cleanup",
+    "aftertests": "node scripts/aftertests",
     "test-all": "npm run test-mocha",
     "test-all-cvr": "npm run test-mocha-cvr",
     "test-mocha": "mocha test --recursive",
@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "archappenv": "^2.0.0-alpha.53",
+    "archappenv": "^1.0.0-beta.1",
     "chalk": "^2.3.0"
   },
   "devDependencies": {
@@ -37,5 +37,11 @@
     "shelljs": "^0.8.1",
     "sinon": "^4.3.0"
   },
-  "repository": "git+https://github.com/cix-cdx/cix-lic"
+  "repository": "git+https://github.com/cix-cdx/cix-lic",
+  "cix-lic": {
+    "baseDir": "./lib",
+    "beginYear": "2018",
+    "assert": true,
+    "assertAll": true
+  }
 }
